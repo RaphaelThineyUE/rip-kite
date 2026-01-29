@@ -3,13 +3,14 @@ import { Hero, CTASection } from '../components'
 import { Download, FileText } from 'lucide-react'
 
 export const PressKitPage: React.FC = () => {
+  const baseUrl = import.meta.env.BASE_URL
   const mediaAssets = [
-    { title: 'Hero Full', description: 'Full harness hero shot', src: '/images/hero_full.png' },
-    { title: 'Hero Center', description: 'Centered product framing', src: '/images/hero_center.png' },
-    { title: 'Buckle Close', description: 'Detail of the buckle mechanism', src: '/images/buckle_close.png' },
-    { title: 'Strap Texture', description: 'Material texture macro shot', src: '/images/strap_texture.png' },
-    { title: 'Orange Accent', description: 'Brand accent material', src: '/images/orange_accent.png' },
-    { title: 'Color Palette', description: 'Brand palette reference', src: '/images/palette.png' },
+    { title: 'Hero Full', description: 'Full harness hero shot', src: `${baseUrl}images/hero_full.png` },
+    { title: 'Hero Center', description: 'Centered product framing', src: `${baseUrl}images/hero_center.png` },
+    { title: 'Buckle Close', description: 'Detail of the buckle mechanism', src: `${baseUrl}images/buckle_close.png` },
+    { title: 'Strap Texture', description: 'Material texture macro shot', src: `${baseUrl}images/strap_texture.png` },
+    { title: 'Orange Accent', description: 'Brand accent material', src: `${baseUrl}images/orange_accent.png` },
+    { title: 'Color Palette', description: 'Brand palette reference', src: `${baseUrl}images/palette.png` },
   ]
 
   return (

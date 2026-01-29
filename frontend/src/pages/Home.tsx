@@ -3,6 +3,7 @@ import { Zap, Wind, Shield, Feather, TrendingUp, Layers } from 'lucide-react'
 import { Hero, FeatureGrid, CTASection } from '../components'
 
 export const HomePage: React.FC = () => {
+  const baseUrl = import.meta.env.BASE_URL
   const features = [
     {
       icon: Wind,
@@ -74,8 +75,8 @@ export const HomePage: React.FC = () => {
               className="w-full rounded-xl"
               controls
               playsInline
-              poster="/images/hero_full.png"
-              src="/videos/FujinPrototypeV10.mp4"
+              poster={`${baseUrl}images/hero_full.png`}
+              src={`${baseUrl}videos/FujinPrototypeV10.mp4`}
             />
           </motion.div>
         </div>
