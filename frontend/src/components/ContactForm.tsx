@@ -29,24 +29,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
     setIsLoading(true)
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
+      const stored = localStorage.getItem('fujinContactRequests')
+      const requests = stored ? (JSON.parse(stored) as Array<typeof formData>) : []
+      requests.unshift({ ...formData })
+      localStorage.setItem('fujinContactRequests', JSON.stringify(requests.slice(0, 50)))
 
-      const data = await response.json()
-
-      if (response.ok) {
-        setMessages({ type: 'success', text: "Message sent! We'll be in touch soon." })
-        setFormData({ name: '', email: '', topic: 'inquiry', message: '' })
-        onSuccess?.()
-        setTimeout(() => setMessages(null), 5000)
-      } else {
-        setMessages({ type: 'error', text: data.error || 'Failed to send message' })
-      }
+      setMessages({ type: 'success', text: "Message saved locally. We'll be in touch soon." })
+      setFormData({ name: '', email: '', topic: 'inquiry', message: '' })
+      onSuccess?.()
+      setTimeout(() => setMessages(null), 5000)
     } catch (error) {
-      setMessages({ type: 'error', text: 'Network error. Please try again.' })
+      setMessages({ type: 'error', text: 'Unable to save message locally. Please try again.' })
     } finally {
       setIsLoading(false)
     }

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navbar, Footer, Modal } from './components'
 import {
   HomePage,
@@ -13,27 +13,6 @@ import {
 
 function AppContent() {
   const [isBuyModalOpen, setIsBuyModalOpen] = useState(false)
-  const location = useLocation()
-
-  useEffect(() => {
-    const trackPageView = async () => {
-      try {
-        await fetch('/api/track', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            event: 'pageview',
-            page: location.pathname,
-            ts: new Date().toISOString(),
-          }),
-        })
-      } catch (error) {
-        console.error('Failed to track page view:', error)
-      }
-    }
-    trackPageView()
-  }, [location.pathname])
-
   return (
     <div className="min-h-screen flex flex-col bg-midnight text-cloud">
       <Navbar onBuyClick={() => setIsBuyModalOpen(true)} />
