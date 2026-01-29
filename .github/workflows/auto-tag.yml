@@ -25,6 +25,7 @@ jobs:
         shell: bash
         run: |
           latest_tag=$(git tag --list "v*" --sort=-v:refname | head -n 1)
+          build_date=$(date -u +"%Y-%m-%d")
 
           if [[ -z "$latest_tag" ]]; then
             next_tag="v0.1.0"
@@ -44,7 +45,7 @@ jobs:
             exit 0
           fi
 
-          git tag "$next_tag"
+          git tag -a "$next_tag" -m "Build $build_date"
           git push origin "$next_tag"
 
           echo "Created tag $next_tag"

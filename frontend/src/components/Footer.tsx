@@ -3,6 +3,8 @@ import { Mail, Github, Twitter, Instagram } from 'lucide-react'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
+  const appVersion = import.meta.env.VITE_APP_VERSION || 'dev'
+  const buildDate = import.meta.env.VITE_BUILD_DATE || 'local'
 
   return (
     <footer className="bg-charcoal border-t border-slate/20 mt-20">
@@ -56,8 +58,9 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate/20 pt-8 text-center text-slate text-sm">
+        <div className="border-t border-slate/20 pt-8 text-center text-slate text-sm space-y-2">
           <p>&copy; {currentYear} Fujin Kiteboard. All rights reserved.</p>
+          <p>Release {appVersion} · Build {buildDate}</p>
         </div>
       </div>
     </footer>
