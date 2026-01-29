@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Hero, FAQAccordion, CTASection } from '../components'
+import { Hero, FAQAccordion } from '../components'
 
 export const FAQPage: React.FC = () => {
   const faqs = [

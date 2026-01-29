@@ -3,6 +3,7 @@
 ## Local Development
 
 ### Prerequisites
+
 - Node.js 18+
 - npm or yarn
 
@@ -21,6 +22,7 @@ npm install
 ### Running
 
 **Terminal 1 - Backend:**
+
 ```bash
 cd backend
 npm run dev
@@ -28,6 +30,7 @@ npm run dev
 ```
 
 **Terminal 2 - Frontend:**
+
 ```bash
 cd frontend
 npm run dev
@@ -35,6 +38,7 @@ npm run dev
 ```
 
 ### Testing
+
 - Open http://localhost:5173
 - Try the contact form
 - Open DevTools Network tab to see API calls

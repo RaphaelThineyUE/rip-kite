@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import { Hero, FeatureGrid, CTASection } from '../components'
-import { Cpu, Box, Zap, Shield } from 'lucide-react'
+import { Hero, CTASection } from '../components'
 
 export const TechnologyPage: React.FC = () => {
   const materials = [

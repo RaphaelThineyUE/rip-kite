@@ -13,7 +13,7 @@ npm install --prefix frontend && npm install --prefix backend
 # Terminal 1: Start backend
 cd backend && npm run dev
 
-# Terminal 2: Start frontend  
+# Terminal 2: Start frontend
 cd frontend && npm run dev
 
 # Open http://localhost:5173
@@ -50,15 +50,15 @@ backend/
 
 ## Pages
 
-| Route | Purpose |
-|-------|---------|
-| `/` | Home with features and proof |
-| `/technology` | Engineering story |
-| `/specs` | Detailed specifications |
-| `/compare` | Comparison vs competitors |
-| `/faq` | 10 FAQs |
-| `/contact` | Contact form |
-| `/press-kit` | Media resources |
+| Route         | Purpose                      |
+| ------------- | ---------------------------- |
+| `/`           | Home with features and proof |
+| `/technology` | Engineering story            |
+| `/specs`      | Detailed specifications      |
+| `/compare`    | Comparison vs competitors    |
+| `/faq`        | 10 FAQs                      |
+| `/contact`    | Contact form                 |
+| `/press-kit`  | Media resources              |
 
 ## API Endpoints
 

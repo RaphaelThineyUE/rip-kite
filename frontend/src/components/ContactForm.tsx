@@ -38,7 +38,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
       const data = await response.json()
 
       if (response.ok) {
-        setMessages({ type: 'success', text: 'Message sent! We'll be in touch soon.' })
+        setMessages({ type: 'success', text: "Message sent! We'll be in touch soon." })
         setFormData({ name: '', email: '', topic: 'inquiry', message: '' })
         onSuccess?.()
         setTimeout(() => setMessages(null), 5000)
