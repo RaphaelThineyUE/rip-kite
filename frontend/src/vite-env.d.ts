@@ -1,8 +1,6 @@
 /// <reference types="vite/client" />
 
-type ViteAppEnv = {
+interface ImportMetaEnv {
   readonly VITE_APP_VERSION?: string
   readonly VITE_BUILD_DATE?: string
 }
-
-declare interface ImportMetaEnv extends ViteAppEnv {}
