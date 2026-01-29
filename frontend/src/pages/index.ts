@@ -1,0 +1,7 @@
+export { HomePage } from './Home'
+export { TechnologyPage } from './Technology'
+export { SpecsPage } from './Specs'
+export { ComparePage } from './Compare'
+export { FAQPage } from './FAQ'
+export { ContactPage } from './Contact'
+export { PressKitPage } from './PressKit'

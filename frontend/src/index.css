@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors;
+}
+
+.container-full {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.button-primary {
+  @apply px-6 py-3 bg-fujin-orange text-midnight font-semibold rounded hover:bg-opacity-90 transition-all duration-200;
+}
+
+.button-secondary {
+  @apply px-6 py-3 border border-fujin-orange text-fujin-orange hover:bg-fujin-orange hover:text-midnight transition-all duration-200 rounded;
+}
+
+.heading-xl {
+  @apply text-5xl md:text-6xl font-bold text-cloud leading-tight;
+}
+
+.heading-lg {
+  @apply text-3xl md:text-4xl font-bold text-cloud;
+}
+
+.heading-md {
+  @apply text-2xl md:text-3xl font-semibold text-cloud;
+}
+
+.text-muted {
+  @apply text-slate;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
