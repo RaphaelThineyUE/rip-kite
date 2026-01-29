@@ -44,6 +44,43 @@ export const HomePage: React.FC = () => {
         cta={{ label: 'Explore Now', onClick: () => window.scrollTo({ top: 800, behavior: 'smooth' }) }}
       />
 
+      <section className="section-padding bg-charcoal">
+        <div className="container-full grid lg:grid-cols-2 gap-10 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <p className="text-fujin-orange uppercase tracking-[0.3em] text-xs">Product Film</p>
+            <h2 className="heading-lg">Meet the Fujin Prototype</h2>
+            <p className="text-slate">
+              See the Fujin V10 in action. Every frame highlights the buckle response, low-profile load path, and
+              body-contouring comfort that riders feel the moment they launch.
+            </p>
+            <ul className="text-slate space-y-2">
+              <li>✓ Buckle engagement in under 0.3 seconds</li>
+              <li>✓ Zero-pressure overlap for long sessions</li>
+              <li>✓ Tested in 35-knot gusts</li>
+            </ul>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-slate/20 bg-midnight p-3"
+          >
+            <video
+              className="w-full rounded-xl"
+              controls
+              playsInline
+              poster="/images/hero_full.png"
+              src="/videos/FujinPrototypeV10.mp4"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       <section className="section-padding bg-midnight">
         <div className="container-full">
           <motion.h2

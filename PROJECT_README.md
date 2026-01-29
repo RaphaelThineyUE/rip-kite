@@ -82,7 +82,7 @@ cd backend && npm run build
 1. Go to your repo settings → Pages
 2. Select "Deploy from a branch"
 3. Choose `main` / `/ (root)`
-4. Your site will be at: `https://yourusername.github.io/rip-kite/`
+4. Your site will be at: https://raphaelthineyue.github.io/rip-kite/
 
 ## Technologies
 

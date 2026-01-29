@@ -65,7 +65,7 @@ npm run build
 2. Push to GitHub
 3. Go to Settings → Pages
 4. Select "Deploy from a branch" → main / root
-5. Your site: https://yourusername.github.io/rip-kite/
+5. Your site: https://raphaelthineyue.github.io/rip-kite/
 
 ### Full Stack Deployment
 

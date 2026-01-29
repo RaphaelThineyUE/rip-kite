@@ -4,10 +4,12 @@ import { Download, FileText } from 'lucide-react'
 
 export const PressKitPage: React.FC = () => {
   const mediaAssets = [
-    { title: 'Logo Suite', description: 'Full color, white, and black variants' },
-    { title: 'Product Photos', description: 'High-res images (4K) for press' },
-    { title: 'Founder Headshots', description: 'Professional photography' },
-    { title: 'Brand Guidelines', description: 'Complete style guide' },
+    { title: 'Hero Full', description: 'Full harness hero shot', src: '/images/hero_full.png' },
+    { title: 'Hero Center', description: 'Centered product framing', src: '/images/hero_center.png' },
+    { title: 'Buckle Close', description: 'Detail of the buckle mechanism', src: '/images/buckle_close.png' },
+    { title: 'Strap Texture', description: 'Material texture macro shot', src: '/images/strap_texture.png' },
+    { title: 'Orange Accent', description: 'Brand accent material', src: '/images/orange_accent.png' },
+    { title: 'Color Palette', description: 'Brand palette reference', src: '/images/palette.png' },
   ]
 
   return (
@@ -27,7 +29,7 @@ export const PressKitPage: React.FC = () => {
           >
             Media Assets
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mediaAssets.map((asset, idx) => (
               <motion.div
                 key={idx}
@@ -37,16 +39,26 @@ export const PressKitPage: React.FC = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="p-6 bg-charcoal rounded-lg border border-slate/20 hover:border-fujin-orange/50 transition-colors"
               >
-                <div className="flex items-start justify-between mb-4">
+                <img
+                  src={asset.src}
+                  alt={asset.title}
+                  className="w-full h-44 object-cover rounded-md mb-4 border border-slate/20"
+                  loading="lazy"
+                />
+                <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-semibold text-cloud">{asset.title}</h3>
                     <p className="text-slate text-sm">{asset.description}</p>
                   </div>
-                  <Download className="text-fujin-orange flex-shrink-0" size={20} />
+                  <a
+                    href={asset.src}
+                    download
+                    className="text-fujin-orange hover:text-fujin-orange/80 text-sm font-medium inline-flex items-center gap-2"
+                  >
+                    Download
+                    <Download className="text-fujin-orange flex-shrink-0" size={16} />
+                  </a>
                 </div>
-                <button className="text-fujin-orange hover:text-fujin-orange/80 text-sm font-medium">
-                  Download
-                </button>
               </motion.div>
             ))}
           </div>
